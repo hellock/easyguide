@@ -47,11 +47,14 @@ sudo pip3 install numpy flake8
 
 ## SSH access (if needed)
 1. Install OpenSSH server
+
     ``` bash
     sudo apt-get install openssh-server
     ```
+
 2. If you want to allow password authentication, modify the file `/etc/ssh/sshd_config`, change `PasswordAuthentication no` to `PasswordAuthentication yes`.
 3. Start SSH server
+
     ``` bash
     sudo service ssh start
     ```

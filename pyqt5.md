@@ -16,18 +16,23 @@
     - `sudo pip3 install PyQt5`
     - compile from source, see the following
 
-``` bash
-wget http://sourceforge.net/projects/pyqt/files/sip/sip-4.18/sip-4.18.tar.gz
-tar -xf sip-4.18.tar.gz
-cd sip-4.18
-python3 configure.py
-make -j
-sudo make install
+        ``` bash
+        wget http://sourceforge.net/projects/pyqt/files/sip/sip-4.18/sip-4.18.tar.gz
+        tar -xf sip-4.18.tar.gz
+        cd sip-4.18
+        python3 configure.py
+        make -j
+        sudo make install
 
-wget http://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.6/PyQt5_gpl-5.6.tar.gz
-tar -xf PyQt5_gpl-5.6.tar.gz
-cd PyQt5_gpl-5.6
-python3 configure.py --qmake QMAKE_PATH
-make -j
-sudo make install
-```
+        wget http://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.6/PyQt5_gpl-5.6.tar.gz
+        tar -xf PyQt5_gpl-5.6.tar.gz
+        cd PyQt5_gpl-5.6
+        python3 configure.py --qmake QMAKE_PATH
+        make -j
+        sudo make install
+        ```
+
+
+
+
+

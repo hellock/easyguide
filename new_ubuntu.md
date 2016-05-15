@@ -45,7 +45,18 @@ sudo pip3 install numpy flake8
 4. Install `Sync Settings`
 5. Download previous settings
 
-## Chinese input method
+## SSH access (if needed)
+1. Install OpenSSH server
+    ``` bash
+    sudo apt-get install openssh-server
+    ```
+2. If you want to allow password authentication, modify the file `/etc/ssh/sshd_config`, change `PasswordAuthentication no` to `PasswordAuthentication yes`.
+3. Start SSH server
+    ``` bash
+    sudo service ssh start
+    ```
+
+## Chinese input method (if needed)
 1. Download Chinese language support
 2. Set keyboard input method system to fcitx
 3. Add text entry.

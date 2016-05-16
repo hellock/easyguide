@@ -4,6 +4,7 @@ This repository is to include installataion and configuration guide of some soft
 
 ## Guide List
 - Configure a new ubuntu machine
+- Configure SSH access to Github
 - Install OpenCV 3
 - Install Qt5 and PyQt5
 - Install dlib

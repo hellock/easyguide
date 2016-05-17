@@ -44,7 +44,7 @@ sudo pip3 install numpy flake8
 3. Install [package control](https://packagecontrol.io/installation)
 4. Install `Sync Settings`
 5. Download previous settings
-6. Install `cppcheck`, `flake8`, 'nodejs' if needed.
+6. Install `cppcheck`, `flake8`, `nodejs` if needed.
 
 ## SSH access (if needed)
 1. Install OpenSSH server

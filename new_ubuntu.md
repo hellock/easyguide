@@ -14,20 +14,14 @@ sudo apt-get upgrade
 sudo apt-get install git
 git config --global user.name "Kai Chen"
 git config --global user.email "chenkaidev@gmail.com"
-ssh-keygen -t rsa -C "chenkaidev@gmail.com"
 ```
 
-Upload pubkey to github
+Then generate private/public key pair and upload the public key to github, see [Configure SSH access to Github](https://github.com/hellock/easyguide/blob/master/github.md) for details.
 
 ## Zsh
 ``` bash
 sudo apt-get zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-## Others
-``` bash
-sudo apt-get install cmake htop tmux
 ```
 
 ## Python 3
@@ -44,9 +38,14 @@ sudo pip3 install numpy flake8
 3. Install [package control](https://packagecontrol.io/installation)
 4. Install `Sync Settings`
 5. Download previous settings
-6. Install `cppcheck`, `flake8`, `nodejs` if needed.
+6. Install `cppcheck`, `chktex`, `flake8`, `nodejs` if necessary.
 
-## SSH access (if needed)
+## Others
+``` bash
+sudo apt-get install cmake htop tmux
+```
+
+## SSH access (if necessary)
 1. Install OpenSSH server
 
     ``` bash
@@ -60,7 +59,7 @@ sudo pip3 install numpy flake8
     sudo service ssh start
     ```
 
-## Chinese input method (if needed)
+## Chinese input method (if necessary)
 1. Download Chinese language support
 2. Set keyboard input method system to fcitx
 3. Add text entry.

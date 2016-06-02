@@ -4,11 +4,10 @@
 Ubuntu 16.04
 
 ## Prerequisites
-Suppose that the following has been installed, otherwise please refer to previous gudies.
+The following are supposed to have been installed, otherwise please refer to the previous guidance.
 
-- CUDA 7.5
-- cuDNN 5
-- OpenCV 3.1
+- [CUDA 7.5 and cuDNN 5](https://github.com/hellock/easyguide/blob/master/cuda.md)
+- [OpenCV 3.1](https://github.com/hellock/easyguide/blob/master/opencv3.md)
 
 ## Install dependency
 ```shell
@@ -21,8 +20,6 @@ sudo apt-get install --no-install-recommends libboost-all-dev
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 sudo pip3 install numpy scipy
 ```
-
-Install OpenCV 3.1 following this [guide](https://github.com/hellock/easyguide/blob/master/opencv3.md)
 
 ## Install Caffe
 
@@ -83,5 +80,13 @@ make all
 make test
 make runtest
 make pycaffe
+```
+
+To have caffe work with python 3, some additional work need to be done.
+
+```shell
+sudo apt-get install libffi-dev
+sudo -H pip3 install cairocffi
+sudo -H pip3 install protobuf --pre
 ```
 

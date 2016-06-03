@@ -30,7 +30,6 @@ cp Makefile.config.example Makefile.config
 ```
 
 Modify (and uncomment) the following lines in config file
-
 ```
 USE_CUDNN := 1
 
@@ -66,7 +65,6 @@ sudo ln -s libboost_python-py35.so libboost_python3.so
 ```
 
 return to the directory of caffe source codes
-
 ```shell
 cd python
 sudo -H pip3 install -r requirements.txt
@@ -74,19 +72,28 @@ cd ..
 ```
 
 then build and test (add -jxx according to the number of CPU cores)
-
 ```shell
 make all
 make test
 make runtest
-make pycaffe
 ```
 
 To have caffe work with python 3, some additional work need to be done.
-
 ```shell
 sudo apt-get install libffi-dev
 sudo -H pip3 install cairocffi
 sudo -H pip3 install protobuf --pre
+make pycaffe
 ```
+
+To build the Matlab interface
+```
+make matcaffe
+```
+
+Add the following line to your shell config file.
+```shell
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+```
+
 

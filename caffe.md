@@ -54,6 +54,8 @@ with
 NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)
 ```
 
+**Note**: For earlier version of caffe that does not support `OPENCV_VERSION` option, we need to modify `Makefile` manually to add `opencv_imgcodecs` to `LIBRARIES`, at around line 170.
+
 Execute
 ```shell
 find . -type f -exec sed -i -e 's^"hdf5.h"^"hdf5/serial/hdf5.h"^g' -e 's^"hdf5_hl.h"^"hdf5/serial/hdf5_hl.h"^g' '{}' \;
@@ -85,13 +87,21 @@ sudo -H pip3 install cairocffi
 sudo -H pip3 install protobuf --pre
 make pycaffe
 ```
+then add the following line to your shell config file
+```shell
+CAFFE_ROOT=path_to_caffe
+export PYTHONPATH=$CAFFE_ROOT/python:$PYTHONPATH
+```
 
 To build the Matlab interface
 ```
 make matcaffe
 ```
 
-Add the following line to your shell config file.
+Some warnings like "The version of gcc is not supported" may occur, just ignore it if the last line of output log is
+>MEX completed successfully.
+
+Some errors related to `libstdc++.so.6` may occur if you run *matcaffe* now, add the following line to your shell config file to solve this error.
 ```shell
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 ```

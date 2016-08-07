@@ -6,8 +6,15 @@ Ubuntu 16.04
 ## Prerequisites
 The following are supposed to have been installed, otherwise please refer to the previous guidance.
 
-- [CUDA 7.5 and cuDNN 5](https://github.com/hellock/easyguide/blob/master/cuda.md)
+- [CUDA 7.5 / 8.0 and cuDNN 5](https://github.com/hellock/easyguide/blob/master/cuda.md)
 - [OpenCV 3.1](https://github.com/hellock/easyguide/blob/master/opencv3.md)
+
+**Note:** If you have compiled OpenCV 3.1 with CUDA 8.0 following the steps in the above guidance, you need to rename a header file.
+
+``` shell
+cd /path_to_thrust_git_repo/detail/type_traits
+ln -s result_of_adaptable_function.h result_of.h
+```
 
 ## Install dependency
 ```shell

@@ -16,13 +16,12 @@ sudo pip3 install numpy
 
 sudo apt-get install ffmpeg libjpeg-dev libtiff-dev libjasper-dev libpng-dev libavcodec-dev libavformat-dev libv4l-dev libswscale-dev libavutil-dev libgtk-3-dev libtbb-dev
 
-git clone https://github.com/Itseez/opencv.git
+git clone https://github.com/opencv/opencv.git
 cd opencv
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D CMAKE_INSTALL_PREFIX=/usr/local/ \
--D INSTALL_PYTHON_EXAMPLES=ON \
 -D WITH_OPENGL=ON \
 -D WITH_V4L=ON \
 -D WITH_TBB=ON \
